@@ -16,9 +16,9 @@ More documentation and tutorial coming soon. The basic installation steps:
 
 *Important Fix*: After installing you must replace one line of code in the `backbone-parse-es6-todos-improved` bundle. This is [line 18587](https://github.com/typhonjs-demos/backbone-parse-es6-todos-improved/blob/master/dist/umd/backbone-parse-es6-todos.js#L18587).  In your local copy you can find this file under this relative path from the project root: `jspm_packages/github/typhonjs-demos/backbone-parse-es6-todos-improved@master/dist/umd/backbone-parse-es6-todos.js`
 
-Before: IS_NODE: typeof process !== 'undefined' && !!process.versions && !!process.versions.node,
+Before: `IS_NODE: typeof process !== 'undefined' && !!process.versions && !!process.versions.node,`
 
-After: IS_NODE: typeof process !== 'undefined' && !!process.versions && !process.versions.electron && !!process.versions.node,
+After: `IS_NODE: typeof process !== 'undefined' && !!process.versions && !process.versions.electron && !!process.versions.node,`
 
 This will allow Parse to run in browser mode with Electron and everything works great! More details are available at [Parse Issue #193](https://github.com/ParsePlatform/Parse-SDK-JS/issues/193)
 
