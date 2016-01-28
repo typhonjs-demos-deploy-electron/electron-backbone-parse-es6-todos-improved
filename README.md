@@ -1,8 +1,6 @@
 # electron-backbone-parse-es6-todos-improved
 Creates a desktop app from [backbone-parse-es6-todos-improved](https://github.com/typhonjs-demos/backbone-parse-es6-todos-improved) using [backbone-parse-es6](https://github.com/typhonjs-parse/backbone-parse-es6) and [Electron](http://electron.atom.io/).
 
-*Important Note*: Presently Parse & `backbone-parse-es6` is not aware of the hybrid nature of Electron. Electron provides a dual Node / browser environment and when Parse is imported it sets `Parse.CoreManager.config.IS_NODE` to true and subsequently ParseUser and ParseObject initialize module private variables thinking the environment is Node. There is a small fix descibed at the end of the installation instructions below.
-
 More documentation and tutorial coming soon. The basic installation steps:
 
 - Install Node
@@ -13,14 +11,6 @@ More documentation and tutorial coming soon. The basic installation steps:
 - If using WebStorm or an IDE which can import Gulp tasks then import them. 
 - Gulp task `electron-start` will launch the Desktop version of `backbone-parse-es6-todos-improved`. 
 - Gulp task `electron-package-<platform>-<arch>` will build a standalone version of the app and place it in the `./build` directory. From the command line run `gulp --tasks` to find the specific platform / architecture task for your machine. On my MBP / OSX the task is: `electron-package-darwin-x64`. For more information on all available Gulp tasks supported please see [typhonjs-core-gulptasks](https://www.npmjs.com/package/typhonjs-core-gulptasks)
-
-*Important Fix*: After installing you must replace one line of code in the `backbone-parse-es6-todos-improved` bundle. This is [line 18587](https://github.com/typhonjs-demos/backbone-parse-es6-todos-improved/blob/master/dist/umd/backbone-parse-es6-todos.js#L18587).  In your local copy you can find this file under this relative path from the project root: `jspm_packages/github/typhonjs-demos/backbone-parse-es6-todos-improved@master/dist/umd/backbone-parse-es6-todos.js`
-
-Before: `IS_NODE: typeof process !== 'undefined' && !!process.versions && !!process.versions.node,`
-
-After: `IS_NODE: typeof process !== 'undefined' && !!process.versions && !process.versions.electron && !!process.versions.node,`
-
-This will allow Parse to run in browser mode with Electron and everything works great! More details are available at [Parse Issue #193](https://github.com/ParsePlatform/Parse-SDK-JS/issues/193)
 
 --------
 
