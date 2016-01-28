@@ -1,7 +1,7 @@
 # electron-backbone-parse-es6-todos-improved
 Creates a desktop app from [backbone-parse-es6-todos-improved](https://github.com/typhonjs-demos/backbone-parse-es6-todos-improved) using [backbone-parse-es6](https://github.com/typhonjs-parse/backbone-parse-es6) and [Electron](http://electron.atom.io/).
 
-*Important Note*: Presently Parse & `backbone-parse-es6` is not aware of the hybrid nature of Electron. Electron provides a dual Node / browser environment and when Parse is imported it sets `Parse.CoreManager.config.IS_NODE` to true and subsequently ParseUser and ParseObject initialize thinking the environment is Node. There is a small fix descibed at the end of the installation instructions below.
+*Important Note*: Presently Parse & `backbone-parse-es6` is not aware of the hybrid nature of Electron. Electron provides a dual Node / browser environment and when Parse is imported it sets `Parse.CoreManager.config.IS_NODE` to true and subsequently ParseUser and ParseObject initialize module private variables thinking the environment is Node. There is a small fix descibed at the end of the installation instructions below.
 
 More documentation and tutorial coming soon. The basic installation steps:
 
