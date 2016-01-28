@@ -20,7 +20,7 @@ Before: IS_NODE: typeof process !== 'undefined' && !!process.versions && !!proce
 
 After: IS_NODE: typeof process !== 'undefined' && !!process.versions && !process.versions.electron && !!process.versions.node,
 
-This will allow Parse to run in browser mode with Electron and everything works great!
+This will allow Parse to run in browser mode with Electron and everything works great! More details are available at [Parse Issue #193](https://github.com/ParsePlatform/Parse-SDK-JS/issues/193)
 
 --------
 
