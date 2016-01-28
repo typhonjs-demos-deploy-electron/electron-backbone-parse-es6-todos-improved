@@ -1,0 +1,13 @@
+/**
+ * Provides the minimum suggested `electron.json` configuration.
+ * Default values for `platform` & `arch` are set to the current platform / arch.
+ * Default values for `source` are set to '.' and `out` is set to 'build'.
+ *
+ * For options to provide in `electron.json` please see:
+ * https://www.npmjs.com/package/electron-packager#programmatic-api
+ */
+{
+   "name": "Todos",
+   "icon": "jspm_packages/github/typhonjs-demos/backbone-parse-es6-todos-improved@master/site/images/icons/favicon",
+   "overwrite": true
+}

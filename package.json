@@ -1,0 +1,45 @@
+{
+  "name": "electron-backbone-parse-es6-todos-improved",
+  "version": "0.1.0",
+  "homepage": "https://github.com/typhonjs-demos/electron-backbone-parse-es6-todos-improved",
+  "description": "Creates a desktop app using Electron from electron-backbone-parse-es6-todos-improved.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typhonjs-demos/electron-backbone-parse-es6-todos-improved/electron-backbone-parse-es6-todos-improved.git"
+  },
+  "jspm": {
+    "dependencies": {
+      "backbone-es6-localstorage-todos": "github:typhonjs-demos/backbone-parse-es6-todos-improved@master"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.35",
+      "babel-runtime": "npm:babel-runtime@^5.8.35",
+      "core-js": "npm:core-js@^1.2.6"
+    },
+    "overrides": {
+      "github:typhonjs-demos/backbone-parse-es6-todos-improved@master": {
+        "main": false,
+        "files": [
+          "dist/",
+          "site/css/",
+          "site/images/",
+          "index.html"
+        ],
+        "dependencies": {},
+        "devDependencies": {}
+      }
+    }
+  },
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.5",
+    "gulp": "^3.9.0",
+    "jspm": "^0.16.25",
+    "typhonjs-core-gulptasks": "^0.5.0"
+  },
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "jspm install"
+  }
+}
