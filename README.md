@@ -3,9 +3,9 @@ Creates a desktop app from [backbone-parse-es6-todos-improved](https://github.co
 
 More documentation and tutorial coming soon. The basic installation steps:
 
-- Install Node
-- Install Gulp globally "npm install gulp -g" (if necessary)
-- Install JSPM / SystemJS globally "npm install jspm -g" (if necessary)
+- Install Node (only once as necessary)
+- Install Gulp globally "npm install gulp -g" (only once as necessary)
+- Install JSPM / SystemJS globally "npm install jspm -g" (only once as necessary)
 - Check out the source repo.
 - Run "npm install" from the local copy directory. (post install script will run `jspm install` automatically)
 - If using WebStorm or an IDE which can import Gulp tasks then import them. 
