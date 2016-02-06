@@ -7,6 +7,6 @@ System.config({
       "optimisation.modules.system"
     ]
   },
-   paths: {},
+  paths: {},
   map: {}
 });
