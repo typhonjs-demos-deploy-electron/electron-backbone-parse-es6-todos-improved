@@ -1,5 +1,5 @@
 /**
- * app.js -- Provides a minimal Electron app launching the bundled version of `backbone-es6-localstorage-todos`.
+ * app.js -- Provides a minimal Electron app launching the bundled version of `backbone-parse-es6-todos-improved`.
  *
  * Please see the JSPM override for `backbone-parse-es6-todos-improved` defined in `package.json` that limits files
  * installed by JSPM to the minimum necessary to launch the bundled app.
